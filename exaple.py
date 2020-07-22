@@ -1,4 +1,5 @@
 import collections
+from random import choice
 
 card = collections.namedtuple("card", ["rank", "suit"])
 
@@ -17,8 +18,15 @@ class FrenchDeck:
         return self._cards[postion]
 
 
-deck = FrenchDeck()
+suits_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)
 
-print(len(deck))
-for card in deck:
+
+def spades_high(card):
+    rank_value = FrenchDeck.ranks.index(card.rank)
+    return rank_value * len(suits_values) + suits_values[card.suit]
+
+
+deck = FrenchDeck()
+for card in sorted(deck, key=spades_high):
     print(card)
+
