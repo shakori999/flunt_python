@@ -95,9 +95,31 @@ array = array.array("I", (ord(symbol) for symbol in symbols))
 
 # ------------------------------------------------
 # example 2-9
-from collections import namedtuple
+# from collections import namedtuple
 
-city = namedtuple("City", "name country population coordinates")
-toko = city("toko", "iraq", 6.23456, (52.6456, 19.5644))
-print(toko)
-print(toko.country)
+# city = namedtuple("City", "name country population coordinates")
+# toko = city("toko", "iraq", 6.23456, (52.6456, 19.5644))
+# print(toko)
+# print(toko.country)
+
+
+# ----------------------------------------------
+# example 2-10
+
+# from collections import namedtuple
+
+# city = namedtuple("City", "name country population coordinates")
+# toko = city("toko", "iraq", 6.23456, (52.6456, 19.5644))
+# print(city._fields)
+
+# baghdad = namedtuple("baghdad", "bag dad")
+# baghdad_data = ("baghdad time", "IQ", "millons", baghdad(654, 321))
+# baghdad = city._make(baghdad_data)
+
+# print(baghdad._asdict())
+
+# for feild, value in baghdad._asdict().items():
+#     print(f"{feild}:", value)
+
+# print(baghdad.__add__(toko))
+
