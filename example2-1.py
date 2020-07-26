@@ -123,3 +123,7 @@ array = array.array("I", (ord(symbol) for symbol in symbols))
 
 # print(baghdad.__add__(toko))
 
+# ----------------------------------------------------
+"""
+SLICING
+"""
