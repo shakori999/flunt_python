@@ -31,5 +31,3 @@ v = v1 * 3
 print(v)
 print(abs(v))
 
-x = [2,4, ,5,6,6]
-
