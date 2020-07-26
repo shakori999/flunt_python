@@ -157,3 +157,16 @@ SLICING
 # print(my_list)
 
 # ------------------------------
+"""
+Building lists of lists
+"""
+
+# board = [["_"] * 3 for i in range(3)]
+# print(board)
+# board[0][1] = "X"
+# print(board)
+# the same of above
+# board = [["_"] * 3] * 3
+# print(board)
+# board[0][1] = "X"
+# print(board)
