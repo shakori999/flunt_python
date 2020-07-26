@@ -127,3 +127,33 @@ array = array.array("I", (ord(symbol) for symbol in symbols))
 """
 SLICING
 """
+# l = "bicycle  a lot of item to buy"
+# print(l[1:20:2])
+# print(l[2:])
+
+# print(l[:3])
+# print(l[3:])
+
+# ---------------------------------------------------------
+
+# l = list(range(18))
+# print(l)
+
+# print(l[2:5])
+
+# del l[5:7]
+# print(l)
+
+# l[3::10] = [11, 22]
+# print(l)
+
+# l[2:5] = 100
+# print(l)
+
+# l[2:5] = [100]
+# print(l)
+
+# my_list = [[1, 2, 4]] * 3
+# print(my_list)
+
+# ------------------------------
