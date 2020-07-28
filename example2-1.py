@@ -182,8 +182,52 @@ Augmented Assignment with Sequences
 # t[2] += [50, 60]
 # print(t)
 
-fruits = ["grape", "respberry", "apple", "banana"]
-print(sorted(fruits, key=len, reverse=True))
+# sorted makes a new list
+# fruits = ["grape", "respberry", "apple", "banana"]
+# print(sorted(fruits, key=len, reverse=True))
 
-fruits.sort()
-print(fruits)
+# list.sort() changes the same objects
+# fruits.sort()
+# print(fruits)
+# --------------------------------------------------
+"""
+Managing ordered sequences with bisect
+"""
+
+# example 2-17
+import bisect
+import sys
+
+# my_list = [1, 5, 11, 13, 16, 20]
+# smaller = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15, 21, 23, 27]
+
+# fow = "{0:2d} @ {1:2d}  {2}{0:<2d}"
+
+
+# def demo(bisect_fn):
+#     for needle in reversed(smaller):
+#         position = bisect_fn(my_list, needle)
+#         offset = position * "   |"
+#         print(fow.format(needle, position, offset))
+
+
+# if __name__ == "__main__":
+#     bisect_fn = bisect.bisect_left
+#     print("DEMO:", bisect_fn.__name__)
+#     print("my_list ->", "  ".join("%2d" % n for n in my_list))
+#     demo(bisect_fn)
+# ----------------------------------------------------------------------
+
+# example 2-18
+
+
+import bisect
+import sys
+
+
+def grade(score, breakpoint=[60, 70, 80, 90], grades="FDCBA"):
+    i = bisect.bisect(breakpoint, score)
+    return grades[i]
+
+
+print([grade(score) for score in [33, 99, 77, 70, 12, 100]])
