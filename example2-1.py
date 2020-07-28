@@ -170,3 +170,14 @@ Building lists of lists
 # print(board)
 # board[0][1] = "X"
 # print(board)
+
+# -----------------------------
+"""
+Augmented Assignment with Sequences
+
+"""
+
+# example 2-14
+t = (1, 2, [30, 40])
+t[2] += [50, 60]
+print(t)
