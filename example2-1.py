@@ -178,6 +178,12 @@ Augmented Assignment with Sequences
 """
 
 # example 2-14
-t = (1, 2, [30, 40])
-t[2] += [50, 60]
-print(t)
+# t = (1, 2, [30, 40])
+# t[2] += [50, 60]
+# print(t)
+
+fruits = ["grape", "respberry", "apple", "banana"]
+print(sorted(fruits, key=len, reverse=True))
+
+fruits.sort()
+print(fruits)
