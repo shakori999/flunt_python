@@ -194,6 +194,9 @@ Augmented Assignment with Sequences
 Managing ordered sequences with bisect
 """
 
+# Searching with bisect
+
+
 # example 2-17
 import bisect
 import sys
@@ -231,3 +234,6 @@ def grade(score, breakpoint=[60, 70, 80, 90], grades="FDCBA"):
 
 
 print([grade(score) for score in [33, 99, 77, 70, 12, 100]])
+# ---------------------------------------------------------------
+
+# Inserting with bisect.insort
