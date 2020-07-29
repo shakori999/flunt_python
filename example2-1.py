@@ -2,37 +2,37 @@
 list comprehensions or listcomps
 
 """
-symbols = "@#(&*$%"
-codes = []
-for symbol in symbols:
-    codes.append(ord(symbol))
+# symbols = "@#(&*$%"
+# codes = []
+# for symbol in symbols:
+# codes.append(ord(symbol))
 # print(codes)
 
 # ----------------------------------
-symbols = "@#(&*$%"
-codes = [ord(symbol) for symbol in symbols]
+# symbols = "@#(&*$%"
+# codes = [ord(symbol) for symbol in symbols]
 # print(codes)
 # ----------------------------------
 # in py3 listcomps and genexps and their siblings have their
 #  own local scope
 
-x = "ABC"
-dummy = [ord(x) for x in x]
+# x = "ABC"
+# dummy = [ord(x) for x in x]
 # print(x)
 # print(dummy)
 # ----------------------------------
 # liscomps do everything the map and filter functions do
-symbols = "(*^&%"
-beyond_ascii = [ord(s) for s in symbols if ord(s) < 127]
+# symbols = "(*^&%"
+# beyond_ascii = [ord(s) for s in symbols if ord(s) < 127]
 # print(beyond_ascii)
 
-symbols = "(*^&%"
-beyond_ascii = list(filter(lambda c: c < 127, map(ord, symbols)))
+# symbols = "(*^&%"
+# beyond_ascii = list(filter(lambda c: c < 127, map(ord, symbols)))
 # print(beyond_ascii)
 
-colors = ["black", "white"]
-sizes = ["S", "M", "L"]
-tshirts = [(color, size) for color in colors for size in sizes]
+# colors = ["black", "white"]
+# sizes = ["S", "M", "L"]
+# tshirts = [(color, size) for color in colors for size in sizes]
 # print(tshirts)
 # --------------------------------------
 # --------------------------------------
@@ -46,15 +46,15 @@ Generator Expressions or genexp
 # If the generator expression is the single argument in a function call, there is no
 # need to duplicate the enclosing parentheses.
 
-symbol = "(*^&*%^"
-tup = tuple(ord(symbol) for symbol in symbols)
+# symbol = "(*^&*%^"
+# tup = tuple(ord(symbol) for symbol in symbols)
 # print(tup)
-import array
+# import array
 
 # The array constructor takes two arguments, so the parentheses around the
 # generator expression are mandatory. The first argument of the array constructor
 # defines the storage type used for the numbers in the array,
-array = array.array("I", (ord(symbol) for symbol in symbols))
+# array = array.array("I", (ord(symbol) for symbol in symbols))
 # print(array)
 
 
@@ -248,3 +248,19 @@ import sys
 #     new_item = random.randrange(size * 2)
 #     bisect.insort(my_list, new_item)
 #     print("%2d ->" % new_item, my_list)
+# _________________________________________________________
+"""arrays"""
+# from array import array
+# from random import random
+
+# floats = array("d", (random() for i in range(10 ** 7)))
+# floats[-1]
+# fp = open("floats.bin", "wb")
+# floats.tofile(fp)
+# fp.close()
+# floats2 = array("d")
+# fp = open("floats.bin", "rb")
+# floats2.fromfile(fp, 10 ** 7)
+# fp.close()
+# floats2[-1]
+# floats2 == floats
